@@ -14,6 +14,7 @@
 		5B9B9CC61EC266B200B3FF20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9B9CC41EC266B200B3FF20 /* LaunchScreen.storyboard */; };
 		5B9B9CD11EC266B200B3FF20 /* AVCaptureSessionExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9B9CD01EC266B200B3FF20 /* AVCaptureSessionExampleTests.swift */; };
 		5B9B9CDC1EC266B200B3FF20 /* AVCaptureSessionExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9B9CDB1EC266B200B3FF20 /* AVCaptureSessionExampleUITests.swift */; };
+		5B9B9CEB1EC266D200B3FF20 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9B9CEA1EC266D200B3FF20 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5B9B9CD71EC266B200B3FF20 /* AVCaptureSessionExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVCaptureSessionExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9B9CDB1EC266B200B3FF20 /* AVCaptureSessionExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureSessionExampleUITests.swift; sourceTree = "<group>"; };
 		5B9B9CDD1EC266B200B3FF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B9B9CEA1EC266D200B3FF20 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9B9CEB1EC266D200B3FF20 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				5B9B9CCF1EC266B200B3FF20 /* AVCaptureSessionExampleTests */,
 				5B9B9CDA1EC266B200B3FF20 /* AVCaptureSessionExampleUITests */,
 				5B9B9CB91EC266B200B3FF20 /* Products */,
+				5B9B9CE91EC266D200B3FF20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				5B9B9CDD1EC266B200B3FF20 /* Info.plist */,
 			);
 			path = AVCaptureSessionExampleUITests;
+			sourceTree = "<group>";
+		};
+		5B9B9CE91EC266D200B3FF20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B9B9CEA1EC266D200B3FF20 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
