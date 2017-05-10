@@ -25,9 +25,10 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let deviceDiscoverySession = AVCaptureDeviceDiscoverySession(deviceTypes: [AVCaptureDeviceType.builtInDualCamera, AVCaptureDeviceType.builtInTelephotoCamera,AVCaptureDeviceType.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: AVCaptureDevicePosition.unspecified)
+        let deviceDiscoverySession = AVCaptureDeviceDiscoverySession(deviceTypes: [AVCaptureDeviceType.builtInDualCamera, AVCaptureDeviceType.builtInTelephotoCamera,AVCaptureDeviceType.builtInWideAngleCamera], mediaType:AVMediaTypeVideo, position: AVCaptureDevicePosition.unspecified)
         for device in (deviceDiscoverySession?.devices)! {
             if(device.position == AVCaptureDevicePosition.back){
+                captureSession.sessionPreset = AVCaptureSessionPresetPhoto;
                 do{
                     let input = try AVCaptureDeviceInput(device: device)
                     if(captureSession.canAddInput(input)){
@@ -36,8 +37,8 @@ class ViewController: UIViewController {
                         if(captureSession.canAddOutput(sessionOutput)){
                             captureSession.addOutput(sessionOutput);
                             previewLayer = AVCaptureVideoPreviewLayer(session: captureSession);
-                            previewLayer.frame = (cameraView?.bounds)!
-                            previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+                            previewLayer.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)//(cameraView?.bounds)!
+                            previewLayer.videoGravity = AVLayerVideoGravityResizeAspect/*AVLayerVideoGravityResizeAspectFill*/;
                             previewLayer.connection.videoOrientation = AVCaptureVideoOrientation.portrait;
                             cameraView?.layer.addSublayer(previewLayer);
                         }
